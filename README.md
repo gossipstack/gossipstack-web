@@ -12,7 +12,7 @@ GossipStack provides ready-to-use **commenting** (Echo) and **social feed** (Chr
 npm i @gossipstack/sdk
 
 # Target a specific version
-npm i @gossipstack/sdk@0.9.28
+npm i @gossipstack/sdk@1.0.0
 ```
 
 ## CDN
@@ -20,7 +20,7 @@ npm i @gossipstack/sdk@0.9.28
 ```html
 <!-- Target specific version for production -->
  
-<script src="https://cdn.gossipstack.com/dist/core/0.9.28/gossipstack-sdk.min.js"></script>
+<script src="https://cdn.gossipstack.com/dist/core/1.0.0/gossipstack-sdk.min.js"></script>
 ```
 
 ## How It Works
@@ -94,6 +94,58 @@ GossipStackSDK.initialize({
   sso_hash: '__HMAC_SIGNATURE__'
 })
 ```
+
+---
+
+## Framework compatibility
+
+The SDK ships as a self-contained JavaScript bundle. All internal dependencies, 
+including the Svelte runtime, are compiled and inlined — the host application 
+requires no additional dependencies.
+
+### How it works
+
+Loading the SDK script registers a single custom HTML element:
+
+```html
+<gossipstack-app></gossipstack-app>
+```
+
+This element acts as the mount point for the SDK. Once it is present in the DOM,
+calling `GossipStackSDK.initialize()` bootstraps the full SDK — loading the
+editor and all internal components into the `<gossipstack-app>` node.
+
+The initialization sequence is always:
+
+1. Load the SDK script — `<gossipstack-app>` is registered
+2. Create and append a `<gossipstack-app>` node to the DOM
+3. Call `GossipStackSDK.initialize()` — the SDK mounts into that node
+
+**`initialize()` must be called exactly once.** Calling it more than once will
+attempt to re-register internal components that are already loaded, which throws
+a browser error. Framework integration guides below handle this automatically.
+
+
+## Framework compatibility
+
+GossipStack is built on the Web Components standard — a native browser API supported by all modern browsers. The SDK ships as a plain JavaScript file with no framework dependency, which means it integrates into any frontend stack without a dedicated wrapper library.
+
+The `<gossipstack-app>` element is a custom HTML element. Any framework that can render HTML and run JavaScript can host it.
+
+Native wrappers for React, Vue 3, and other frameworks are on our roadmap.
+These will be published as dedicated packages (`@gossipstack/react`, `@gossipstack/vue`)
+and will handle the initialization sequence, DOM injection, and hooks
+out of the box — with full TypeScript support.
+
+In the meantime, the integration is straightforward and well-documented.
+Each guide below includes a live StackBlitz example you can fork and run instantly.
+
+
+| Framework | GitHub | StackBlitz |
+|-----------|--------|------------|
+| React | [gossipstack-for-react](https://stackblitz.com/edit/xyecqfgz-9xb1alce?file=src%2FApp.jsx) | [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/xyecqfgz-9xb1alce?file=src%2FApp.jsx) |
+| Vue 3 | [gossipstack-for-vue](https://stackblitz.com/edit/ldvjx41u-5in5tysg?file=src%2FApp.vue) | [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/ldvjx41u-5in5tysg?file=src%2FApp.vue) |
+
 
 ## Documentation
 

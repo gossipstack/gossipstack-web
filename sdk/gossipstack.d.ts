@@ -1,12 +1,12 @@
 /*!
  *
- *  gossipstack.d.ts
- *  GossipStack
+ * gossipstack.d.ts
+ * GossipStack
  *
- *  version 0.9.28
+ * version 1.0.0
  *
- *  Created by GossipStack on 23/04/2026
- *  Copyright © 2026 GossipStack. All rights reserved.
+ * Created by Honmono Studio SAS on 02-07-2026
+ * Copyright © 2026 Honmono Studio SAS. All rights reserved.
  *
  * https://gossipstack.com
  *
@@ -20,7 +20,7 @@
  * Unauthorized copying, modification, reverse engineering, decompilation,
  * disassembly, redistribution, sublicensing, or commercial use of this
  * software, in whole or in part, by any means and in any form, is strictly
- * prohibited without the prior express written permission of Honmono Studio.
+ * prohibited without the prior express written permission of Honmono Studio SAS.
  *
  * The publication of this software at a publicly accessible URL for the
  * purpose of distribution to authorized licensees does not constitute a
