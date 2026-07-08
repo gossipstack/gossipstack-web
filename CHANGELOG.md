@@ -1,3 +1,18 @@
+## 1.0.2
+
+### Fixes
+- Minor improvements and optimizations
+
+### Getting Started
+- [Documentation](https://docs.gossipstack.com/)
+- [Demo App](https://github.com/gossipstack/gossipstack-web/)
+- [SSO Examples](https://github.com/gossipstack/gossipstack-sso-examples)
+
+An active GossipStack subscription is required.
+Create your account at [dashboard.gossipstack.com](https://dashboard.gossipstack.com).
+
+---
+
 ## 1.0.1
 
 Bug fixes and minor improvements to the Echo commenting experience.

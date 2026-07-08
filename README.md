@@ -12,7 +12,7 @@ GossipStack provides ready-to-use **commenting** (Echo) and **social feed** (Chr
 npm i @gossipstack/sdk
 
 # Target a specific version
-npm i @gossipstack/sdk@1.0.1
+npm i @gossipstack/sdk@1.0.2
 ```
 
 ## CDN
@@ -20,7 +20,7 @@ npm i @gossipstack/sdk@1.0.1
 ```html
 <!-- Target specific version for production -->
  
-<script src="https://cdn.gossipstack.com/dist/core/1.0.1/gossipstack-sdk.min.js"></script>
+<script src="https://cdn.gossipstack.com/dist/core/1.0.2/gossipstack-sdk.min.js"></script>
 ```
 
 ## How It Works
