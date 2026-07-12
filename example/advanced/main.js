@@ -118,6 +118,27 @@ function handleUnauthenticatedAction(event) {
 }
 
 /**
+ * Called when the GossipStack SDK's CSS has finished loading.
+ * No event object is provided.
+ */
+function handleOnCssLoaded() {
+    // The SDK styles are now applied to the page.
+    // You can override with your style.
+
+    /*
+    We encourage you to use the Appearance feature available on the dashboard instead.
+
+    const style = document.createElement('style');
+    style.textContent = `
+      gossipstack-app .some_class {
+        color: blue;
+      }
+    `;
+    document.head.appendChild(style);
+    */
+}
+
+/**
  * Maps an action type to a human-readable label.
  *
  * @param {string} type - The action type.
@@ -157,6 +178,7 @@ function initGossipStackSDK() {
     GossipStackSDK.addHook('text-click-event',          handleTextClickEvent);
     GossipStackSDK.addHook('on-avatar-click-event',     handleAvatarClickEvent);
     GossipStackSDK.addHook('on-unauthenticated-action', handleUnauthenticatedAction);
+    GossipStackSDK.addHook('on-css-loaded',             handleOnCssLoaded);
 }
 
 initGossipStackSDK()
