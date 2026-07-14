@@ -20,7 +20,7 @@ npm i @gossipstack/sdk@1.0.3
 ```html
 <!-- Target specific version for production -->
  
-<script src="https://cdn.gossipstack.com/dist/core/1.0.3/gossipstack-sdk.min.js"></script>
+<script src="https://cdn.gossipstack.com/dist/core/1.0.3/gossipstack.min.js"></script>
 ```
 
 ## How It Works
