@@ -3,9 +3,9 @@
  * gossipstack.d.ts
  * GossipStack
  *
- * version 1.0.3
+ * version 1.0.4
  *
- * Created by Honmono Studio SAS on 12-07-2026
+ * Created by Honmono Studio SAS on 16-07-2026
  * Copyright © 2026 Honmono Studio SAS. All rights reserved.
  *
  * https://gossipstack.com
